@@ -1,0 +1,22 @@
+@import url("theme.css");
+
+.about {
+    padding: 5rem 9%;
+    text-align: center;
+    background-color: var(--body-color);
+}
+
+.about .heading {
+    font-size: 2rem;
+    font-weight: var(--font-semi-bold);
+    color: var(--second-color);
+    margin-bottom: 1.5rem;
+}
+
+.about p {
+    font-size: 1.2rem;
+    color: var(--fourth-color);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
