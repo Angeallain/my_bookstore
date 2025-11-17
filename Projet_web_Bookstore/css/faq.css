@@ -1,0 +1,34 @@
+@import url("theme.css");
+
+.faq {
+    padding: 5rem 9%;
+    background-color: var(--body-color);
+}
+
+.faq .heading {
+    font-size: 2rem;
+    font-weight: var(--font-semi-bold);
+    color: var(--second-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.faq-item {
+    background: var(--first-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h3 {
+    font-size: 1.4rem;
+    font-weight: var(--font-semi-bold);
+    color: var(--second-color);
+}
+
+.faq-item p {
+    font-size: 1rem;
+    color: var(--fourth-color);
+    margin-top: 0.5rem;
+}

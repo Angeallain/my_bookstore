@@ -1,0 +1,89 @@
+/*---------------------GOOGLE FONTS---------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+@import url("theme.css");
+
+
+/*---------------------BASE---------------------*/
+.footer {
+  background-color: var(--third-color);
+  padding: 50px 0;
+  font-family: var(--body-font);
+  color: var(--second-color);
+}
+
+.footer .container {
+  max-width: 1120px;
+  margin: auto;
+}
+
+.footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: var(--second-color);
+  text-transform: capitalize;
+  margin-bottom: 25px;
+  font-weight: var(--font-semi-bold);
+  position: relative;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  color: var(--second-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: var(--first-color);
+}
+
+/*---------------------SOCIAL LINKS---------------------*/
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: var(--fourth-color);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: var(--second-color);
+  transition: background-color 0.3s;
+}
+
+.footer-col .social-links a:hover {
+  background-color: var(--first-color);
+  color: white;
+}
+
+/*---------------------RESPONSIVE---------------------*/
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}

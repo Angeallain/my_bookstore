@@ -1,0 +1,18 @@
+@import url("theme.css");
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Assure que la page prend au moins toute la hauteur de l'écran */
+}
+
+
+main {
+    flex: 1; /* Force le contenu à occuper l'espace restant pour pousser le footer en bas */
+}
+
+.footer {
+    width: 100%;
+    margin-top: auto; /* Permet au footer de rester en bas même si le contenu est trop court */
+}
+
+

@@ -1,0 +1,37 @@
+@import url("theme.css");
+
+.genres {
+    padding: 5rem 9%;
+    background-color: var(--first-color);
+    text-align: center;
+}
+
+.genres .heading {
+    font-size: 2rem;
+    font-weight: var(--font-semi-bold);
+    color: var(--second-color);
+    margin-bottom: 1.5rem;
+}
+
+.genre-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.genre {
+    background-color: var(--third-color);
+    color: var(--white-color);
+    font-size: 1.2rem;
+    font-weight: var(--font-medium);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s, background 0.3s;
+    cursor: pointer;
+}
+
+.genre:hover {
+    transform: scale(1.1);
+    background-color: var(--fourth-color);
+}

@@ -1,0 +1,39 @@
+@import url("theme.css");
+
+/* Gestion de stock et commandes */
+
+.stock-input {
+  width: 60px;
+  padding: 5px;
+  border: 1px solid var(--third-color);
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.update-stock, .ship-order {
+  background-color: var(--third-color);
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.update-stock:hover, .ship-order:hover {
+  background-color: var(--second-color);
+}
+
+@media (max-width: 600px) {
+  .stock-input {
+    width: 50px;
+    font-size: 0.8rem;
+  }
+
+  .update-stock, .ship-order {
+    font-size: 0.75rem;
+    padding: 5px 8px;
+  }
+}

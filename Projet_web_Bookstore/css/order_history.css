@@ -1,0 +1,104 @@
+@import url("theme.css");
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--body-color);
+}
+
+.order-history-section {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.container2{
+    background-color: var(--back-color);
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+    margin-top: 8rem;
+    margin-bottom: 5rem ;
+}
+
+
+.heading {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--second-color);
+    font-weight: var(--font-semi-bold);
+}
+
+.heading span {
+    color: var(--lighter-second-color);
+}
+
+.order-history-section {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.order {
+    width: 100%;
+    max-width: 700px;
+    background-color: var(--first-color);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+}
+
+
+.order-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--grey-color);
+}
+
+.order-items {
+    padding-left: 1rem;
+}
+
+.order-item {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    color: var(--second-color);
+}
+
+.status {
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    color: var(--white-color);
+}
+
+.status.en-attente {
+    background-color: var(--lighter-second-color);
+}
+
+.status.expédiée {
+    background-color: var(--third-color);
+}
+
+.status.livrée {
+    background-color: var(--fourth-color);
+}
+
+.status.annulée {
+    background-color: #c0392b; 
+}
+
+
+

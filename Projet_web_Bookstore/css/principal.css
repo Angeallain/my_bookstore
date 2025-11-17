@@ -1,0 +1,269 @@
+@import url("theme.css");
+
+section{
+    padding: 5rem 9%;
+}
+
+.principal{
+    background-color: var(--body-color);
+    background-size: cover;
+    background-position: center;
+    height: 43rem;
+}
+
+.principal .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.principal .row .content{
+    flex: 1 1 40%;  
+    text-align: left;
+    margin-top: 1.5rem;
+}
+
+.principal .row .books-slider {
+    width: 100%; /* Ajuste à la largeur du parent */
+    max-width: 400px; /* Définit la largeur du slider */
+    overflow: hidden; /* Cache les images qui débordent */
+    position: relative; /* Permet d'ajouter des boutons */
+}
+
+.principal .row .books-slider .wraper {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem; 
+    overflow-x: auto; /* Permet le scroll horizontal */
+    scroll-behavior: smooth; /* Animation fluide */
+    scrollbar-width: none; /* Cache la scrollbar (Firefox) */
+    -webkit-overflow-scrolling: touch; /* Améliore le scroll sur mobile */
+    overflow: hidden;
+    padding-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.principal .row .books-slider .wraper::-webkit-scrollbar {
+    display: none; /* Cache la scrollbar sur Chrome et Safari */
+}
+
+.principal .row .books-slider .wraper a {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+}
+
+.principal .row .books-slider .wraper img {
+    width: 150px;
+    height: 100%;
+    border-radius: 10px;
+    cursor: grab;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Animation fluide */
+    opacity: 0.5; /* Les images non actives seront plus transparentes */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.principal .row .books-slider .wraper img.active {
+    transform: scale(1.1); /* Zoom léger */
+    opacity: 1; /* Image bien visible */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Ombre pour effet "mis en avant" */
+    transform-origin: center center;
+}
+
+/* Style des boutons de navigation */
+.principal .row .books-slider .prev, 
+.principal .row .books-slider .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 50%;
+}
+
+.principal .row .books-slider .prev { left: -10px; }
+.principal .row .books-slider .next { right: -10px; }
+
+.principal .row .books-slider a:hover img{
+    transform: scale(.9); 
+}
+
+.principal .row .books-slider .stand {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    background-color: var(--second-color); 
+    color: var(--first-color);
+    font-size: var(--normal-font-size);
+    font-family: var(--body-font);
+    font-weight: var(--font-semi-bold);
+}
+
+.principal .row .content h3{
+    color: var(--second-color);
+    font-size: 2rem;
+}
+
+.principal .row .content p{
+    color: var(--fourth-color);
+    font-weight: var(--font-semi-bold);
+    font-family: var(--body-font);
+    line-height: 2;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+}
+
+.bttn{
+    background-color: var(--second-color);
+    color: var(--white-color);
+    font-size: 12px;
+    font-family: var(--body-font);
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: var(--font-semi-bold);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.bttn:hover{
+    background-color: var(--third-color);
+    transform: scale(1.05);
+}
+
+.decoration {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 350px - 8rem); /* (height de .principal) - (height de .row) - (marge en rem) */
+    background: var(--third-color); /* Couleur de la vague */
+    mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%2328a745" fill-opacity="1" d="M0,224L60,213.3C120,203,240,181,360,181.3C480,181,600,203,720,192C840,181,960,139,1080,122.7C1200,107,1320,117,1380,122.7L1440,128V320H0Z"></path></svg>');
+    mask-size: cover;
+}
+
+
+@media (max-width:991px){
+    section{
+        padding: 3rem 2rem;
+    }
+    .principal .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .principal .row .content,
+    .principal .row .books-slider {
+        flex: 1 1 100%;
+        text-align: center; 
+    }
+
+    .bttn {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .principal .row .content h3{
+        font-size: 2rem;
+    }
+
+    .principal .row .books-slider {
+        max-width: 90%; /* S'adapte à la largeur de l'écran */
+    }
+
+    .principal .row .books-slider .wraper {
+        overflow-x: auto; /* Permet le scroll horizontal */
+        scroll-snap-type: x mandatory; /* Pour un swipe plus fluide */
+    }
+
+    .principal .row .books-slider .wraper a img {
+        width: 120px; /* Réduction de la taille des images */
+    }
+
+    .principal .row .books-slider .prev,
+    .principal .row .books-slider .next {
+        font-size: 18px; /* Boutons légèrement plus petits */
+        padding: 8px;
+    }
+
+    .decoration{
+        display: none;
+    }
+
+
+}
+
+/* TABLETTES (768px) */
+@media (max-width: 768px) {
+    section {
+        padding: 2.5rem 1.5rem; /* Réduction de l'espace */
+    }
+
+    .principal .row .content h3 {
+        font-size: 1.8rem; /* Réduction légère de la taille du texte */
+    }
+
+    .bttn {
+        padding: 14px; /* Légèrement plus petit */
+    }
+
+    .principal .row .books-slider {
+        max-width: 95%; /* Ajuste à l'écran */
+    }
+
+    .principal .row .books-slider .wraper a img {
+        width: 100px; /* Réduction des images */
+    }
+
+    .principal .row .books-slider .prev,
+    .principal .row .books-slider .next {
+        font-size: 16px;
+        padding: 6px;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 2rem 1rem; 
+    }
+
+    .principal .row .content h3 {
+        font-size: 1.5rem; 
+    }
+
+    .bttn {
+        padding: 12px; 
+    }
+
+    .principal .row .books-slider {
+        max-width: 100%; /* Occupe toute la largeur */
+    }
+
+    .principal .row .books-slider .wraper {
+        gap: 0.5rem; /* Réduit l'espacement entre les images */
+    }
+
+    .principal .row .books-slider .wraper a img {
+        width: 80px; /* Encore plus petit pour tenir sur un écran mobile */
+    }
+
+    .principal .row .books-slider .prev,
+    .principal .row .books-slider .next {
+        font-size: 14px;
+        padding: 5px;
+        top: 40%; /* Ajuste la position verticale */
+    }
+
+}

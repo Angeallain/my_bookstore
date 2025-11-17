@@ -1,0 +1,155 @@
+@import url("theme.css");
+
+body {
+    font-family: var(--font-family);
+    background: var(--body-color);
+    color: var(--second-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: var(--third-color);
+    color: var(--white-color);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1, h2 {
+    margin: 1rem 0;
+}
+
+button {
+    padding: 8px 14px;
+    background: var(--second-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: var(--lighter-second-color);
+}
+
+/* Dashboard sections */
+.dashboard {
+    background: var(--white-color);
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    border: 1px solid var(--third-color);
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: var(--third-color);
+    color: var(--white-color);
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.4);
+    z-index: 999;
+}
+
+.modal-content {
+    background: var(--white-color);
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.book-thumbnail {
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  
+
+@media (max-width: 600px) {
+    .dashboard {
+        padding: 1rem;
+        overflow-x: auto;        
+    }
+
+    table {
+        display: block;           
+        width: max-content;       
+    }
+
+    table th, table td {
+        font-size: 0.9rem;
+    }
+
+    .modal-content {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 300px) {
+    header h1 {
+      font-size: 1rem;
+    }
+  
+    button {
+      padding: 6px 10px;
+      font-size: 0.75rem;
+    }
+  
+    table th,
+    table td {
+      font-size: 0.7rem;
+      padding: 6px;
+    }
+  
+    .book-thumbnail {
+      width: 40px;
+    }
+  
+    .modal-content input {
+      font-size: 0.75rem;
+    }
+  }
+  

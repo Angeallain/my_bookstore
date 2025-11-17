@@ -1,0 +1,44 @@
+.book-filter-form {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.filter-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.filter-flex input,
+.filter-flex select {
+    flex: 1 1 20rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    min-width: 12rem;
+}
+
+.filter-flex button.btn {
+    padding: 0.75rem 2rem;
+    background-color: #6ab04c;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-flex button.btn:hover {
+    background-color: #4e944f;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <title>Page de Connexion</title>
+</head>
+
+<body>
+
+  <header class="header">
+        <div id="navbar"></div>
+  </header>
+  <div class="b-container">
+    <div class="container2" id="container2">
+        <!-- Formulaire d'inscription -->
+        <div class="form-container sign-up">
+            <form action="register.php" method="POST">
+                <h1 class="command">Créer un Compte</h1>
+                <input type="text" name="nom" placeholder="Nom" required>
+                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="password" name="mot_de_passe" placeholder="Mot de passe" required>
+                <button type="submit">S'inscrire</button>
+                <p class="mobile-switch">Vous avez déjà un compte ? 
+                    <a href="#" id="mobile-login">Connectez-vous</a>
+                </p>
+            </form>
+            
+        </div>
+
+        <!-- Formulaire de connexion -->
+        <div class="form-container sign-in">
+            <form action="login.php" method="POST">
+                <h1 class="command">Se Connecter</h1>
+                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="password" name="mot_de_passe" placeholder="Mot de passe" required>
+                <select name="role" id="user-role">
+                    <option value="user">Utilisateur</option>
+                    <option value="admin">Administrateur</option>
+                </select>
+                <button type="submit" id="sign-in-btn">Connexion</button>
+                <p class="mobile-switch">Vous n'avez pas de compte ? 
+                    <a href="#" id="mobile-register">Inscrivez-vous</a>
+                </p>
+            </form>
+            
+        </div>
+
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Bon Retour !</h1>
+                    <p>Connectez-vous pour continuer</p>
+                    <button class="hidden" id="login">Se Connecter</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Bonjour !</h1>
+                    <p>Inscrivez-vous pour commencer</p>
+                    <button class="hidden" id="register">S'inscrire</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+        <div id="footer"></div>
+  </footer>
+
+    <script src="../js/register.js"></script>
+    <script src="../js/loading.js"></script>
+</body>
+</html>
